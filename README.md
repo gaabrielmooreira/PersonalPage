@@ -1,5 +1,5 @@
 # Personal Page
 
 ### Education
-### Portifólio
+### Portifolio
 ### Contact-me
