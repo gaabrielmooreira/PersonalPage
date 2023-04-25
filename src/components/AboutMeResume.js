@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
 export default function AboutMeResume() {
     return (
@@ -10,7 +10,7 @@ export default function AboutMeResume() {
                 <LeftContainer>
                     <DescriptionMeTitle>I’ve been developing since 2020</DescriptionMeTitle>
                     <Description>
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+                        My first contact with development was at CEFET/RJ, where I chose informatics for the technician, there I learned a little about computer architecture, notions about computer networks and basic notions of programming in the C++ language.
                     </Description>
                 </LeftContainer>
                 <RightContainer>
@@ -27,12 +27,12 @@ export default function AboutMeResume() {
                         </DescriptionProject>
                     </div>
                     <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam, quis nostrud exercitation.
+                        In 2020, when i go back to the technology area, i've been developing API's in TypeScript with NodeJs enviroment and front-ends in ReactJs. In this moment, i have done 25 public projects.
                     </Description>
                 </RightContainer>
             </MainContainer>
             <MoreAboutMeContainer>
-                <MoreAboutMeLink href="https://www.linkedin.com/in/gaabrielmooreira/" target="_blank"><p>More About Me<span><AiOutlineArrowRight size="25px"/></span></p>  <div /></MoreAboutMeLink>
+                <MoreAboutMeLink href="https://www.linkedin.com/in/gaabrielmooreira/" target="_blank"><p>More About Me<span><AiOutlineArrowRight size="25px" /></span></p>  <div /></MoreAboutMeLink>
             </MoreAboutMeContainer>
         </AboutMeContainer>
     )

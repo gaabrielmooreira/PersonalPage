@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export default function ProjectCard(){
+export default function ProjectCard() {
     return (
-    <ProjectCardStyled>
-        <ProjectGif/>
-        <ProjectDescription>
-            <DescriptionTitle>Dashboard</DescriptionTitle>
-            <Description>ASSASHIASHI ASHISAHIASHI ASIHASISAHIA ASIhSAIHSA</Description>
-            <BrowseProject>view project</BrowseProject>
-        </ProjectDescription>
-    </ProjectCardStyled>
+        <ProjectCardStyled>
+            <ProjectGif />
+            <ProjectDescription>
+                <DescriptionTitle>Dashboard</DescriptionTitle>
+                <Description>ASSASHIASHI ASHISAHIASHI ASIHASISAHIA ASIhSAIHSA</Description>
+                <BrowseProject>view project</BrowseProject>
+            </ProjectDescription>
+        </ProjectCardStyled>
     )
 }
 

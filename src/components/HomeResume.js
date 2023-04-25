@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SocialMedias from "./SocialMedias"
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import foto_gabriel from "../assets/Gabriel.png";
 
 export default function HomeResume() {
     return (
@@ -9,13 +10,16 @@ export default function HomeResume() {
                 <TopLineTitle />
                 <DescriptionMeTitle>I’m Gabriel, a Full Stack Developer</DescriptionMeTitle>
                 <DescriptionMe></DescriptionMe>
+                <CirclePhoto>
+                    <img src={foto_gabriel} alt="foto_perfil" />
+                </CirclePhoto>
             </LeftContainer>
             <RightContainer>
                 <ContainerResume>
                     <h2>ABOUT ME</h2>
                     <p>I started my career in software development two years ago, diving in the technology world.</p>
                     <LinkContainer>
-                        <LinkMoreInformation href="#about-me"><p>LEARN MORE<span><AiOutlineArrowRight size="16px"/></span></p>  <div /></LinkMoreInformation>
+                        <LinkMoreInformation href="#about-me"><p>LEARN MORE<span><AiOutlineArrowRight size="16px" /></span></p>  <div /></LinkMoreInformation>
                     </LinkContainer>
                 </ContainerResume>
                 <DivHorizontalSeparator />
@@ -23,7 +27,7 @@ export default function HomeResume() {
                     <h2>MY WORK</h2>
                     <p>In those two years, i've made a lot of real projects to put my skills in practice.</p>
                     <LinkContainer>
-                        <LinkMoreInformation href="#portfolio"><p>BROWSE PORTFOLIO<span><AiOutlineArrowRight size="16px"/></span></p>  <div /></LinkMoreInformation>
+                        <LinkMoreInformation href="#portfolio"><p>BROWSE PORTFOLIO<span><AiOutlineArrowRight size="16px" /></span></p>  <div /></LinkMoreInformation>
                     </LinkContainer>
                 </ContainerResume>
                 <DivHorizontalSeparator />
@@ -69,6 +73,18 @@ const DescriptionMe = styled.p`
     color: #B4BAC4;
     font-size: 16px;
     line-height: 30px;
+`
+
+const CirclePhoto = styled.div`
+    margin-top: 50px-;
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
 `
 
 const ContainerResume = styled.div`

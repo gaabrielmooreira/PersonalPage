@@ -2,22 +2,22 @@ import styled from "styled-components"
 import foto_gabriel from "../assets/Gabriel.png"
 import SocialMedias from "./SocialMedias"
 
-export default function Footer(){
+export default function Footer() {
     return (
         <FooterDiv>
             <FooterContent>
                 <LeftContent>
                     <AboutMeFooter>
                         <CirclePhoto>
-                            <img src={foto_gabriel} alt="foto_perfil"/>
+                            <img src={foto_gabriel} alt="foto_perfil" />
                         </CirclePhoto>
                         <DescriptionMe>
                             <h3>Gabriel Moreira</h3>
                             <p>Full Stack Developer</p>
                         </DescriptionMe>
                     </AboutMeFooter>
-                    
-                    <SocialMedias/>
+
+                    <SocialMedias />
                 </LeftContent>
                 <RightContent>
 

@@ -1,9 +1,9 @@
 
 import styled from "styled-components";
 
-export default function SocialMediaLink(props){
-    const {isMouseOver, setMouseOver, link} = props;
-    return(
+export default function SocialMediaLink(props) {
+    const { isMouseOver, setMouseOver, link } = props;
+    return (
         <SocialMediaLi onMouseOver={() => setMouseOver(true)} onMouseOut={() => setMouseOver(false)} isMouseOver={isMouseOver}>
             <a href={link} target="_blank">{props.children}</a>
         </SocialMediaLi>
@@ -14,7 +14,7 @@ const SocialMediaLi = styled.li`
     padding: 3px 0 0 0;
     transition: padding .3s ease;
     &:not(:hover){
-        opacity: ${props=> props.isMouseOver ? '0.5' : '1.0'};
+        opacity: ${props => props.isMouseOver ? '0.5' : '1.0'};
     }
     &:hover{
         cursor: pointer;

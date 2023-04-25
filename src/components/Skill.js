@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function Skill({objectSkill}){
-    const {logoIcon, name, description} = objectSkill;
+export default function Skill(props){
+    const {logoIcon, name, description} = props.objectSkill;
 
     return(
         <SkillCard>
@@ -15,7 +15,7 @@ export default function Skill({objectSkill}){
 }
 
 const SkillCard = styled.div`
-    min-width: 380px;
+    max-width: 380px;
     min-height: 500px;
     background-color: #2D343F;
     display: flex;
@@ -23,7 +23,6 @@ const SkillCard = styled.div`
     justify-content: center;
     padding: 60px;
     border-radius: 30px;
-    margin-right: 40px;
 `
 
 const SkillLogo = styled.div`
@@ -46,9 +45,9 @@ const SkillName = styled.h3`
 
 const SkillDescription =  styled.p`
     font-size: 22px;
-    line-height: 40px;
+    line-height: 30px;
     color: #C3CAD5;
-    margin-bottom: 50px;
+    height: 100px;
 `
 
 const BottomLine = styled.div`

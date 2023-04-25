@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 import ProjectCard from "./ProjectCard"
 
 export default function Portfolio() {
@@ -8,9 +8,9 @@ export default function Portfolio() {
             <StyledH2><span>/</span> My Portfolio</StyledH2>
             <DescriptionContainer>
                 <Description>Explore my latest projects i've done</Description>
-                <BrowseMyProjects href="https://github.com/gaabrielmooreira" target="_blank"><p>Browse GitHub<span><AiOutlineArrowRight size="25px"/></span></p>  <div /></BrowseMyProjects>
+                <BrowseMyProjects href="https://github.com/gaabrielmooreira" target="_blank"><p>Browse GitHub<span><AiOutlineArrowRight size="25px" /></span></p>  <div /></BrowseMyProjects>
             </DescriptionContainer>
-            <ProjectCard/>
+            <ProjectCard />
         </PortfolioDiv>
     )
 }
