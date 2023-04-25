@@ -8,11 +8,15 @@ export default function HomeResume() {
         <HomeContainer>
             <LeftContainer>
                 <TopLineTitle />
+
                 <DescriptionMeTitle>I’m Gabriel, a Full Stack Developer</DescriptionMeTitle>
-                <DescriptionMe></DescriptionMe>
+
                 <CirclePhoto>
                     <img src={foto_gabriel} alt="foto_perfil" />
                 </CirclePhoto>
+                
+                <DescriptionMe></DescriptionMe>
+
             </LeftContainer>
             <RightContainer>
                 <ContainerResume>
@@ -76,7 +80,7 @@ const DescriptionMe = styled.p`
 `
 
 const CirclePhoto = styled.div`
-    margin-top: 50px-;
+    margin-top: 100px;
     width: 300px;
     height: 300px;
     margin-right: 20px;

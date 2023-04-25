@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import ProjectCard from "./ProjectCard"
+import projects from "../mocks/projects"
 
 export default function Portfolio() {
     return (
@@ -10,7 +11,18 @@ export default function Portfolio() {
                 <Description>Explore my latest projects i've done</Description>
                 <BrowseMyProjects href="https://github.com/gaabrielmooreira" target="_blank"><p>Browse GitHub<span><AiOutlineArrowRight size="25px" /></span></p>  <div /></BrowseMyProjects>
             </DescriptionContainer>
-            <ProjectCard />
+            <ProjectsContainer>
+                {
+                    projects.map(e =>
+                        <ProjectCard
+                            image={e.image}
+                            description={e.description}
+                            title={e.title}
+                            link={e.link}
+                        />
+                    )
+                }
+            </ProjectsContainer>
         </PortfolioDiv>
     )
 }
@@ -47,6 +59,7 @@ const Description = styled.p`
     font-size: 50px;
     font-weight: 700;
 `
+
 const BrowseMyProjects = styled.a`
     align-self: flex-end;
     font-size: 30px;
@@ -78,4 +91,8 @@ const BrowseMyProjects = styled.a`
             }
         }
     }
+`
+
+const ProjectsContainer = styled.div`
+    display: flex;
 `
