@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 export default function AboutMeResume() {
     return (
@@ -7,7 +8,7 @@ export default function AboutMeResume() {
             <StyledH2><span>/</span> ABOUT ME</StyledH2>
             <MainContainer>
                 <LeftContainer>
-                    <DescriptionMeTitle>I’ve been developing websites since 2020</DescriptionMeTitle>
+                    <DescriptionMeTitle>I’ve been developing since 2020</DescriptionMeTitle>
                     <Description>
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
                     </Description>
@@ -16,12 +17,12 @@ export default function AboutMeResume() {
                     <div>
                         <DescriptionProject>
                             <p>
-                                <span>12</span>
+                                <span>2</span>
                                 Years of experience
                             </p>
                             <p>
-                                <span>150</span>
-                                Successful projects
+                                <span>25</span>
+                                Open source projects
                             </p>
                         </DescriptionProject>
                     </div>
@@ -31,7 +32,7 @@ export default function AboutMeResume() {
                 </RightContainer>
             </MainContainer>
             <MoreAboutMeContainer>
-                <a href="#">More about me</a>
+                <MoreAboutMeLink href="https://www.linkedin.com/in/gaabrielmooreira/" target="_blank"><p>More About Me<span><AiOutlineArrowRight size="25px"/></span></p>  <div /></MoreAboutMeLink>
             </MoreAboutMeContainer>
         </AboutMeContainer>
     )
@@ -109,5 +110,37 @@ const MoreAboutMeContainer = styled.div`
         font-weight: 700;
         line-height: 34px;
     }
-    border-bottom: solid 3px #FFFFFF;
+`
+
+const MoreAboutMeLink = styled.a`
+    align-self: flex-end;
+    font-size: 30px;
+    font-weight: 700;
+    p{
+        margin-bottom: 10px;
+        span{
+            padding: 0px 5px 0px 5px;
+            transition: padding .2s linear;
+        }
+    }
+    div{
+        height: 3px;
+        width: 100%;
+        background-color: #C3CAD5;
+        background: linear-gradient(to right, #FFFFFF 50%, #5D6C83 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        transition: background-position 0.5s ease;
+    }
+    &:hover{
+        cursor: pointer;
+        div{
+            background-position: left;
+        }
+        p {
+            span{
+            padding: 0px 0px 0px 10px;
+            }
+        }
+    }
 `

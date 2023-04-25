@@ -2,10 +2,10 @@
 import styled from "styled-components";
 
 export default function SocialMediaLink(props){
-    const {isMouseOver, setMouseOver} = props;
+    const {isMouseOver, setMouseOver, link} = props;
     return(
         <SocialMediaLi onMouseOver={() => setMouseOver(true)} onMouseOut={() => setMouseOver(false)} isMouseOver={isMouseOver}>
-            <a href="#">{props.children}</a>
+            <a href={link} target="_blank">{props.children}</a>
         </SocialMediaLi>
     )
 }

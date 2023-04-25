@@ -9,17 +9,17 @@ import Portfolio from "./components/Portfolio";
 export default function App() {
   return (
     <>
-      <DefaultDiv>
+      <DefaultDiv id="home">
         <Header />
         <HomeResume />
       </DefaultDiv>
-      <SecondDiv>
+      <SecondDiv id="about-me">
         <AboutMeResume />
       </SecondDiv>
-      <DefaultDiv>
+      <DefaultDiv id="skills">
         <MySkills />
       </DefaultDiv>
-      <SecondDiv>
+      <SecondDiv id="portfolio">
         <Portfolio />
       </SecondDiv>
       <HorizontalLine />

@@ -28,10 +28,10 @@ export default function Footer(){
 
             <FooterNav>
                 <ListMenu>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                 </ListMenu>
             </FooterNav>
         </FooterDiv>
@@ -109,5 +109,6 @@ const ListMenu = styled.ul`
     color: #FFFFFF;
     a {
         text-decoration: none;
+        color: #FFFFFF;
     }
 `

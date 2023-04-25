@@ -1,28 +1,29 @@
 import styled from "styled-components"
 import SocialMedias from "./SocialMedias"
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 export default function HomeResume() {
     return (
         <HomeContainer>
             <LeftContainer>
                 <TopLineTitle />
-                <DescriptionMeTitle>I’m Gabriel, a Web Developer</DescriptionMeTitle>
-                <DescriptionMe>Lorem ipsum dolor sit amet consectetur adipiscing elit leo quis ullamcorper quis id elementum convallis lacus gravida.</DescriptionMe>
+                <DescriptionMeTitle>I’m Gabriel, a Full Stack Developer</DescriptionMeTitle>
+                <DescriptionMe></DescriptionMe>
             </LeftContainer>
             <RightContainer>
                 <ContainerResume>
                     <h2>ABOUT ME</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo quis ullamcorper quis id elementum convallis lacus gravida.</p>
+                    <p>I started my career in software development two years ago, diving in the technology world.</p>
                     <LinkContainer>
-                        <a href="#">LEARN MORE</a>
+                        <LinkMoreInformation href="#about-me"><p>LEARN MORE<span><AiOutlineArrowRight size="16px"/></span></p>  <div /></LinkMoreInformation>
                     </LinkContainer>
                 </ContainerResume>
                 <DivHorizontalSeparator />
                 <ContainerResume>
                     <h2>MY WORK</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit leo quis ullamcorper quis id elementum convallis lacus gravida.</p>
+                    <p>In those two years, i've made a lot of real projects to put my skills in practice.</p>
                     <LinkContainer>
-                        <a href="#">BROWSER PORTFOLIO</a>
+                        <LinkMoreInformation href="#portfolio"><p>BROWSE PORTFOLIO<span><AiOutlineArrowRight size="16px"/></span></p>  <div /></LinkMoreInformation>
                     </LinkContainer>
                 </ContainerResume>
                 <DivHorizontalSeparator />
@@ -90,11 +91,42 @@ const LinkContainer = styled.div`
     font-size: 16px;
     font-family: 'Inconsolata', monospace;
     width: max-content;
-    border-bottom: 1px solid #FFF;
-    padding-bottom: 5px;
     a {
         text-decoration: none;
         color: #FFF;
+    }
+`
+
+const LinkMoreInformation = styled.a`
+    align-self: flex-end;
+    font-size: 16px;
+    font-weight: 400;
+    p{
+        margin-bottom: 5px;
+        span{
+            padding: 0px 5px 0px 5px;
+            transition: padding .2s linear;
+        }
+    }
+    div{
+        height: 2px;
+        width: 100%;
+        background-color: #C3CAD5;
+        background: linear-gradient(to right, #FFFFFF 50%, #5D6C83 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        transition: background-position 0.5s ease;
+    }
+    &:hover{
+        cursor: pointer;
+        div{
+            background-position: left;
+        }
+        p {
+            span{
+            padding: 0px 0px 0px 10px;
+            }
+        }
     }
 `
 
@@ -104,5 +136,4 @@ const DivHorizontalSeparator = styled.div`
     background-color: #2D343F;
     margin: 40px 0;
 `
-
 

@@ -7,12 +7,12 @@ export default function Header() {
             <StyledH1><span>{"</>"}</span> Full Stack Developer</StyledH1>
             <StyledNav>
                 <ul>
-                    <li>Home</li>
-                    <li>About Me</li>
-                    <li>Skills</li>
-                    <li>Portfolio</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                 </ul>
-                <StyledTbMenu />
+                {false && <StyledTbMenu />}
             </StyledNav>
         </StyledHeader>
     )
@@ -36,14 +36,18 @@ const StyledH1 = styled.h1`
 const StyledNav = styled.nav`
     width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     ul {
         width: 80%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         color: #FFFFFF;
         font-size: 20px;
+        a {
+        text-decoration: none;
+        color: #FFFFFF;
+        }
     }
 `
 const StyledTbMenu = styled(TbMenu)`

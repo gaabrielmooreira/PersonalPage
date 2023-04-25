@@ -8,7 +8,7 @@ export default function Portfolio() {
             <StyledH2><span>/</span> My Portfolio</StyledH2>
             <DescriptionContainer>
                 <Description>Explore my latest projects i've done</Description>
-                <BrowseMyProjects><p>Browse all projects<span><AiOutlineArrowRight size="25px"/></span></p>  <div /></BrowseMyProjects>
+                <BrowseMyProjects href="https://github.com/gaabrielmooreira" target="_blank"><p>Browse GitHub<span><AiOutlineArrowRight size="25px"/></span></p>  <div /></BrowseMyProjects>
             </DescriptionContainer>
             <ProjectCard/>
         </PortfolioDiv>
@@ -36,6 +36,10 @@ const DescriptionContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
 `
 
 const Description = styled.p`
