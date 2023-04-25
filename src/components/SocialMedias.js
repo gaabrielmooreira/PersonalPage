@@ -16,13 +16,13 @@ export default function SocialMedias() {
                 <FaFacebookF size="28px" />
             </SocialMediaLink>
 
-            <SocialMediaLink
+            {/* <SocialMediaLink
                 isMouseOver={isMouseOver}
                 setMouseOver={setMouseOver}
                 link="https://twitter.com/gaabrielmo"
             >
                 <FaTwitter size="28px" />
-            </SocialMediaLink>
+            </SocialMediaLink> */}
 
             <SocialMediaLink
                 isMouseOver={isMouseOver}
@@ -52,7 +52,7 @@ export default function SocialMedias() {
 }
 
 const SocialMediasContainer = styled.ul`
-    width: 250px;
+    width: 200px;
     display: flex;
     justify-content: space-between; 
 `
