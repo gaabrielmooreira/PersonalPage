@@ -23,27 +23,19 @@ export default function Footer() {
 
                 </RightContent>
             </FooterContent>
-
-            <HorizontalLine />
-
-            <FooterNav>
-                <ListMenu>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                </ListMenu>
-            </FooterNav>
         </FooterDiv>
     )
 }
 
 const FooterDiv = styled.div`
-    width: 100vw;
-    height: 520px;
-    background-color: #1B1F24;
-    padding: 0px calc( (100% - 1024px) / 2 );
+    width: 1024px;
+    height: 420px;
+    margin: 0 auto;
+    @media screen and (max-width: 1279px){
+        width: 80%;
+    }
 `
+
 const FooterContent = styled.div`
     height: 420px;
     display: flex;
@@ -54,11 +46,15 @@ const FooterContent = styled.div`
 const LeftContent = styled.div`
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 1279px){
+        width: 100%;
+        margin: 0 auto;
+    }
 `
 
 const CirclePhoto = styled.div`
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     margin-right: 20px;
     img{
         width: 100%;
@@ -87,28 +83,8 @@ const DescriptionMe = styled.div`
 `
 
 const RightContent = styled.div`
-`
-
-const HorizontalLine = styled.div`
-    width: 100%;
-    height: 1px;
-    background-color: #7e8899;
-`
-
-const FooterNav = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-`
-const ListMenu = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    font-size: 20px;
-    color: #FFFFFF;
-    a {
-        text-decoration: none;
-        color: #FFFFFF;
+    @media screen and (max-width: 1279px){
+        display: none;
     }
 `
+

@@ -20,6 +20,9 @@ const ProjectCardStyled = styled.div`
     border-radius: 30px;
     background-color: #2D343F;
     margin-left: 20px;
+    @media screen and (max-width: 1023px){
+        width: 300px;
+    }
 `
 
 const ProjectGif = styled.img`

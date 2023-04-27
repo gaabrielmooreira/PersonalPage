@@ -9,11 +9,6 @@ import { useState } from "react";
 
 export default function MySkills() {
     const carousel = useRef(null);
-    const responsive = {
-        0: { items: 1 },
-        768: { items: 1.5 },
-        1024: { items: 2.5, itemsFit: 'contain' }
-    }
     const items = skillsList.map((s) => <Skill objectSkill={s} />);
     const [index, setIndex] = useState(0);
 
@@ -50,9 +45,15 @@ export default function MySkills() {
                 key="carousel"
                 ref={carousel}
                 activeIndex={index}
+                controlsStrategy="responsive"
                 disableDotsControls
                 disableButtonsControls
-                responsive={responsive}
+                responsive={{
+                    0: { items: 1.05 },
+                    479: { items: 1.5 },
+                    767: { items: 1.8 },
+                    1023: { items: 2.5, itemsFit: 'contain' }
+                }}
                 mouseTracking={true}
                 items={items}
                 onSlideChanged={onSlideChanged}
@@ -62,10 +63,15 @@ export default function MySkills() {
 }
 
 const MySkillsContainer = styled.div`
+    width: 1024px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    @media screen and (max-width: 1279px){
+        width: 80%;
+    }
 `
 
 const StyledH2 = styled.h2`
@@ -89,6 +95,9 @@ const DescriptionTitle = styled.h3`
     font-weight: 700;
     line-height: 60px;
     margin-bottom: 0;
+    @media screen and (max-width: 1279px){
+        font-size: 40px;
+    }
 `
 
 const PrevButton = styled.button`
@@ -106,7 +115,7 @@ const PrevButton = styled.button`
         background-color: #235fe4;
         transform: scale(0.95);
     }
-    @media (max-width: 1024px){
+    @media (max-width: 1023px){
         display: none;
     }
 `
@@ -124,7 +133,7 @@ const NextButton = styled.button`
         transition: all 0.8s;
         transform: scale(0.95);
     }
-    @media (max-width: 1024px){
+    @media (max-width: 1023px){
         display: none;
     }
 `

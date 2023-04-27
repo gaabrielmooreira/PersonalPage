@@ -14,9 +14,6 @@ export default function HomeResume() {
                 <CirclePhoto>
                     <img src={foto_gabriel} alt="foto_perfil" />
                 </CirclePhoto>
-                
-                <DescriptionMe></DescriptionMe>
-
             </LeftContainer>
             <RightContainer>
                 <ContainerResume>
@@ -48,16 +45,30 @@ const HomeContainer = styled.div`
   display: flex;
   align-items: center;
   height: 80%;
+  margin: 0 auto;
+  width: 1024px;
+  @media screen and (max-width: 1279px){
+        width: 80%;
+  }
 `
 
 const LeftContainer = styled.div`
     width: 50%;
     padding-right: 5%;
+
+    @media screen and (max-width: 1023px){
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
 `
 
 const RightContainer = styled.div`
     width: 50%;
     padding-left: 22.5%;
+    @media screen and (max-width: 1023px){
+        display: none;
+    }
 `
 
 const TopLineTitle = styled.div`
@@ -71,12 +82,10 @@ const DescriptionMeTitle = styled.p`
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 12px;
-`
 
-const DescriptionMe = styled.p`
-    color: #B4BAC4;
-    font-size: 16px;
-    line-height: 30px;
+    @media screen and (max-width: 767px){
+        font-size: 40px;
+    }
 `
 
 const CirclePhoto = styled.div`
@@ -88,6 +97,19 @@ const CirclePhoto = styled.div`
         width: 100%;
         height: 100%;
         border-radius: 50%;
+    }
+    @media screen and (max-width: 379px){
+        width: 200px;
+        height: 200px;
+    }
+
+    @media screen and (max-width: 767px){
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    @media screen and (max-width: 1023px){
+        margin: 60px auto 20px auto;
     }
 `
 

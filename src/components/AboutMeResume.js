@@ -39,10 +39,15 @@ export default function AboutMeResume() {
 }
 
 const AboutMeContainer = styled.div`
+    width: 1024px;
     height:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    @media screen and (max-width: 1279px){
+        width: 80%;
+    }
 `
 
 const StyledH2 = styled.h2`
@@ -63,11 +68,18 @@ const MainContainer = styled.div`
 const LeftContainer = styled.div`
     width: 50%;
     padding-right: 5%;
+    @media screen and (max-width: 767px){
+        width: 100%;
+        padding: 0;
+    }
 `
 
 const RightContainer = styled.div`
     width: 50%;
     padding-left: 5%;
+    @media screen and (max-width: 767px){
+        display: none;
+    }
 `
 
 const DescriptionMeTitle = styled.h2`
@@ -75,6 +87,9 @@ const DescriptionMeTitle = styled.h2`
     font-weight: 700;
     line-height: 60px;
     margin-bottom: 12px;
+    @media screen and (max-width: 1279px){
+        font-size: 40px;
+    }
 `
 
 const Description = styled.p`
@@ -110,6 +125,10 @@ const MoreAboutMeContainer = styled.div`
         font-weight: 700;
         line-height: 34px;
     }
+    @media screen and (max-width: 767px){
+        width: 80%;
+        margin: 50px auto 0 auto;
+    }
 `
 
 const MoreAboutMeLink = styled.a`
@@ -141,6 +160,17 @@ const MoreAboutMeLink = styled.a`
             span{
             padding: 0px 0px 0px 10px;
             }
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        div {
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 768px){
+        div {
+            width: 230px;
         }
     }
 `

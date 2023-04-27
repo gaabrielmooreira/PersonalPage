@@ -2,6 +2,9 @@ import styled from "styled-components"
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import ProjectCard from "./ProjectCard"
 import projects from "../mocks/projects"
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 export default function Portfolio() {
     return (
@@ -12,26 +15,51 @@ export default function Portfolio() {
                 <BrowseMyProjects href="https://github.com/gaabrielmooreira" target="_blank"><p>Browse GitHub<span><AiOutlineArrowRight size="25px" /></span></p>  <div /></BrowseMyProjects>
             </DescriptionContainer>
             <ProjectsContainer>
-                {
-                    projects.map(e =>
-                        <ProjectCard
-                            image={e.image}
-                            description={e.description}
-                            title={e.title}
-                            link={e.link}
-                        />
-                    )
-                }
+                <AllProjects>
+                    {
+                        projects.map(e =>
+                            <ProjectCard
+                                image={e.image}
+                                description={e.description}
+                                title={e.title}
+                                link={e.link}
+                            />
+                        )
+                    }
+                </AllProjects>
+                <AliceCarouselDiv>
+                    <AliceCarousel
+                        disableButtonsControls
+                        mouseTracking={true}
+                        responsive={{ 0: { items: 1 },}}
+                    >
+                        {
+                            projects.map(e =>
+                                <ProjectCard
+                                    image={e.image}
+                                    description={e.description}
+                                    title={e.title}
+                                    link={e.link}
+                                />
+                            )
+                        }
+                    </AliceCarousel>
+                </AliceCarouselDiv>
             </ProjectsContainer>
         </PortfolioDiv>
     )
 }
 
 const PortfolioDiv = styled.div`
+    width: 1024px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    @media screen and (max-width: 1279px){
+        width: 80%;
+    }
 `
 
 const StyledH2 = styled.h2`
@@ -43,6 +71,7 @@ const StyledH2 = styled.h2`
         font-size: 30px;
     }
 `
+
 const DescriptionContainer = styled.div`
     width: 100%;
     display: flex;
@@ -58,6 +87,10 @@ const Description = styled.p`
     width: 40%;
     font-size: 50px;
     font-weight: 700;
+    @media screen and (max-width: 1023px){
+        width: 100%;
+        font-size: 40px;
+    }
 `
 
 const BrowseMyProjects = styled.a`
@@ -91,8 +124,26 @@ const BrowseMyProjects = styled.a`
             }
         }
     }
+    @media screen and (max-width: 1023px){
+        display: none;
+    }
 `
 
 const ProjectsContainer = styled.div`
+`
+
+const AllProjects = styled.div`
     display: flex;
+    @media screen and (max-width: 1023px){
+        display: none;
+    }
+`
+
+const AliceCarouselDiv = styled.div`
+    display: none;
+    @media screen and (max-width: 1023px){
+        display: flex;
+        width: 325px;
+        margin: 0 auto;
+    }
 `

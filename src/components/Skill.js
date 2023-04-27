@@ -23,6 +23,10 @@ const SkillCard = styled.div`
     justify-content: center;
     padding: 60px;
     border-radius: 30px;
+    @media screen and (max-width: 1279px){
+        max-width: 300px;
+        padding: 30px;
+    }
 `
 
 const SkillLogo = styled.div`
@@ -41,6 +45,9 @@ const SkillName = styled.h3`
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 20px;
+    @media screen and (max-width: 1279px){
+        font-size: 30px;
+    }
 `
 
 const SkillDescription =  styled.p`
@@ -48,6 +55,9 @@ const SkillDescription =  styled.p`
     line-height: 30px;
     color: #C3CAD5;
     height: 100px;
+    @media screen and (max-width: 1279px){
+        font-size: 18px;
+    }
 `
 
 const BottomLine = styled.div`
