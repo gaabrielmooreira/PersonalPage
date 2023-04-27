@@ -9,7 +9,7 @@ import FooterNav from "./components/FooterNav";
 import { useState } from "react"
 
 export default function App() {
-  const [menuIsOpen, setMenuIsOpen] = useState(true);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
     <>
