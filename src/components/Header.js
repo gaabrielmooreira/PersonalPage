@@ -1,7 +1,11 @@
 import styled from "styled-components"
-import { TbMenu } from "react-icons/tb"
+import { FiMenu } from "react-icons/fi"
 
-export default function Header() {
+
+export default function Header({ setMenuIsOpen, menuIsOpen }) {
+
+
+
     return (
         <StyledHeader>
             <StyledH1><span>{"</>"}</span> Full Stack Developer</StyledH1>
@@ -13,7 +17,8 @@ export default function Header() {
                     <li><a href="#portfolio">Portfolio</a></li>
                 </ul>
             </StyledNav>
-            <StyledTbMenu />
+            <StyledFiMenu onClick={() => { setMenuIsOpen(!menuIsOpen) }} />
+
         </StyledHeader>
     )
 }
@@ -58,7 +63,7 @@ const StyledNav = styled.nav`
         display: none;
     }
 `
-const StyledTbMenu = styled(TbMenu)`
+const StyledFiMenu = styled(FiMenu)`
     display: none;
     @media screen and (max-width: 1023px){
         display: flex;

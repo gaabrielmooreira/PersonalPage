@@ -16,7 +16,7 @@ export default function Skill(props){
 
 const SkillCard = styled.div`
     max-width: 380px;
-    min-height: 500px;
+    height: 500px;
     background-color: #2D343F;
     display: flex;
     flex-direction: column;
@@ -26,6 +26,18 @@ const SkillCard = styled.div`
     @media screen and (max-width: 1279px){
         max-width: 300px;
         padding: 30px;
+    }
+
+    @media screen and (max-width: 379px){
+        height: 400px;
+        padding: 30px;
+        width: 280px;
+    }
+
+    @media screen and (max-width: 326px){
+        height: 400px;
+        padding: 30px;
+        width: 246px;
     }
 `
 
@@ -50,13 +62,18 @@ const SkillName = styled.h3`
     }
 `
 
-const SkillDescription =  styled.p`
+const SkillDescription = styled.p`
     font-size: 22px;
     line-height: 30px;
     color: #C3CAD5;
     height: 100px;
     @media screen and (max-width: 1279px){
         font-size: 18px;
+    }
+
+    @media screen and (max-width: 326px){
+        font-size: 14px;
+        line-height: 20px;
     }
 `
 

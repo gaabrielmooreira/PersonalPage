@@ -31,22 +31,22 @@ export default function Portfolio() {
                     <AliceCarousel
                         disableButtonsControls
                         mouseTracking={true}
-                        responsive={{ 0: { items: 1 },}}
+                        responsive={{ 0: { items: 1 }, 1024: {items: 2}}}
                     >
-                        {
-                            projects.map(e =>
-                                <ProjectCard
-                                    image={e.image}
-                                    description={e.description}
-                                    title={e.title}
-                                    link={e.link}
-                                />
-                            )
-                        }
-                    </AliceCarousel>
-                </AliceCarouselDiv>
-            </ProjectsContainer>
-        </PortfolioDiv>
+                    {
+                        projects.map(e =>
+                            <ProjectCard
+                                image={e.image}
+                                description={e.description}
+                                title={e.title}
+                                link={e.link}
+                            />
+                        )
+                    }
+                </AliceCarousel>
+            </AliceCarouselDiv>
+        </ProjectsContainer>
+        </PortfolioDiv >
     )
 }
 
@@ -89,6 +89,9 @@ const Description = styled.p`
     font-weight: 700;
     @media screen and (max-width: 1023px){
         width: 100%;
+        font-size: 40px;
+    }
+    @media screen and (max-width: 1279px){
         font-size: 40px;
     }
 `
@@ -134,16 +137,28 @@ const ProjectsContainer = styled.div`
 
 const AllProjects = styled.div`
     display: flex;
-    @media screen and (max-width: 1023px){
+    justify-content: space-between;
+    @media screen and (max-width: 1279px){
         display: none;
     }
 `
 
 const AliceCarouselDiv = styled.div`
     display: none;
+    @media screen and (max-width: 1279px){
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
     @media screen and (max-width: 1023px){
         display: flex;
-        width: 325px;
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 326px){
+        display: flex;
+        width: 256px;
         margin: 0 auto;
     }
 `

@@ -15,13 +15,22 @@ export default function ProjectCard({ image, description, title, link }) {
 }
 
 const ProjectCardStyled = styled.div`
-    width: 320px;
+    max-width: 320px;
     height: 520px;
     border-radius: 30px;
     background-color: #2D343F;
-    margin-left: 20px;
-    @media screen and (max-width: 1023px){
+    @media screen and (max-width: 1279px){
         width: 300px;
+    }
+
+    @media screen and (max-width: 379px){
+        height: 420px;
+        max-width: 300px;
+    }
+
+    @media screen and (max-width: 326px){
+        height: 420px;
+        width: 246px;
     }
 `
 
@@ -30,12 +39,20 @@ const ProjectGif = styled.img`
     height: 220px;
     background-color: #CCC;
     border-radius: 30px 30px 0 0;
+    @media screen and (max-width: 379px){
+        height: 160px;
+    }
+
 `
 
 const ProjectDescription = styled.div`
     display: flex;
     flex-direction: column;
     padding: 40px 30px 60px 30px;
+
+    @media screen and (max-width: 326px){
+        padding: 20px 20px 30px 20px;
+    }
 `
 
 const DescriptionTitle = styled.h4`
@@ -51,6 +68,11 @@ const Description = styled.p`
     height: 90px;
     color: #ccc;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 326px){
+        font-size: 14px;
+        line-height: 20px;
+    }
 `
 
 const BrowseProject = styled.a`

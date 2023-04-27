@@ -49,7 +49,8 @@ export default function MySkills() {
                 disableDotsControls
                 disableButtonsControls
                 responsive={{
-                    0: { items: 1.05 },
+                    0: { items: 1 },
+                    379: { items: 1.05 },
                     479: { items: 1.5 },
                     767: { items: 1.8 },
                     1023: { items: 2.5, itemsFit: 'contain' }
